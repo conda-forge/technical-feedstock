@@ -1,5 +1,5 @@
 {% set name = "technical" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/technical-{{ version }}.tar.gz
-  sha256: a14ee6d701c5aaf1c6b3ec9f772986bd50508da6d64eb0822fd1451f5ce2591f
+  sha256: 23a28118d64119411d5f0a9fd910b60ce1e0736c3ee5438c08a59802bcddf7ad
 
 build:
   number: 0
