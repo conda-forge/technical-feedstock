@@ -11,19 +11,20 @@ source:
   sha256: 23a28118d64119411d5f0a9fd910b60ce1e0736c3ee5438c08a59802bcddf7ad
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
+    - python >=3.9
+    - setuptools >=46.4.0
+    - wheel
     - pip
-    - python >=3.6
   run:
-    - arrow
-    - pandas
-    - python >=3.6
+    - python >=3.9
     - ta-lib
+    - pandas
 
 test:
   imports:
