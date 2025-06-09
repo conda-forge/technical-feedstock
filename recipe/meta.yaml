@@ -1,5 +1,5 @@
 {% set name = "technical" %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/technical-{{ version }}.tar.gz
-  sha256: 990251c66e10efeeea5be41e841a907d9ec841344361ce0d3a2178048b65583a
+  sha256: c56c016c10ba037f17a7059c50df27cb7f77eef63e1f7e554585156244afdc43
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
