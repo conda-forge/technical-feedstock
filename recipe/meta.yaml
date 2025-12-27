@@ -1,5 +1,5 @@
 {% set name = "technical" %}
-{% set version = "1.5.3" %}
+{% set version = "1.5.4" %}
 {% set python_min = "3.10" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/technical-{{ version }}.tar.gz
-  sha256: ffda73a8dbf25a23eee429307f5ace4b3b4ad7ab8b6c515fa6b8193607c90092
+  sha256: d26341320feb89bbf6dc4a30631c65649649f75ebefe4d986534604c1ec4a982
 
 build:
   number: 0
