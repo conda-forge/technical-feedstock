@@ -16,7 +16,6 @@ Documentation: https://simplejson.readthedocs.io/
 This is a collection of technical indicators collected or developed
 for Freqtrade as well as utilities such as timeframe resampling.
 
-
 Current build status
 ====================
 
