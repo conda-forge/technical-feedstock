@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  name: technical
+  version: "1.7.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/technical-${{ version }}.tar.gz
+  sha256: dedf00e1c91e6618e0577b89698013eda5af4c6a88b66c31a49c8c3da3d3095c
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=46.4.0
+    - wheel
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - ta-lib
+    - pandas
+
+tests:
+  - python:
+      imports:
+        - technical
+        - technical.consensus
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  summary: Different indicators developed or collected for the Freqtrade
+  description: |
+    This is a collection of technical indicators collected or developed
+    for Freqtrade as well as utilities such as timeframe resampling.
+  homepage: https://github.com/freqtrade/technical
+  repository: https://github.com/simplejson/simplejson
+  documentation: https://simplejson.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
